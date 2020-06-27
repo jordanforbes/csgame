@@ -7,7 +7,7 @@ namespace csgame.Models
             Name = "King Arthur";
             Type = "King";
             Strength = 10;
-            health = 50;
+            Health = 50;
         }
     }
 }

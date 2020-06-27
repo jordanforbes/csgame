@@ -12,6 +12,8 @@ namespace csgame.Models
 
         public string Type {get;set;}
 
+        public List<Item> Inventory
+
         public Player(string name) => Name = name;
 
         public virtual void ShowStats()
