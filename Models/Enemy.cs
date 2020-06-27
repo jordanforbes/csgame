@@ -1,3 +1,5 @@
+using System;
+
 namespace csgame.Models 
 {
     public abstract class Enemy {
@@ -6,10 +8,17 @@ namespace csgame.Models
         public int Strength;
         public int Dexterity;
         public int Speed;
-        public int health;
+        public int Health;
         public Enemy()
         {
-            
+
+        }
+        public virtual void showHp()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"%%%%%%%%%%% Enemy HP: {Health} %%%%%%%%%%%");
+            Console.ResetColor();
+
         }
     }
 }

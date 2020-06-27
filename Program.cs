@@ -24,6 +24,11 @@ namespace csgame
             Console.WriteLine(text);
             Console.ResetColor();
         }
+        static void ConsoleRed (string text){
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(text);
+            Console.ResetColor();
+        }
         static void ConsoleBlue (string text)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
