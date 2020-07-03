@@ -20,5 +20,13 @@ namespace csgame.Models
             Console.ResetColor();
 
         }
+
+        public virtual void Attack(Player target)
+        {
+            int dmg = Strength;
+            target.Health -=dmg;
+            Color.Red($"{Name} attacks {target.Name} for {dmg} Damage!");
+        }
+
     }
 }

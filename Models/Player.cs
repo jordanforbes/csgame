@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+
 namespace csgame.Models
 {
     public abstract class Player
@@ -12,9 +14,23 @@ namespace csgame.Models
 
         public string Type {get;set;}
 
-        public List<Item> Inventory
+        public List<Weapon> Inventory {get;set;}
 
-        public Player(string name) => Name = name;
+        public string CurrentWeapon {get;set;}
+
+        public Player(string name)
+        {
+            Name = name;
+            CurrentWeapon = "1";
+        }
+
+        // public static void Initialize()
+        // {
+        //     Stick stick = new Stick("Time Stick", 5);
+        //     Inventory<Weapon> Bag = new Inventory<Weapon>();
+
+        //     Bag.Add(stick, 5);
+        // }
 
         public virtual void ShowStats()
         {
@@ -22,25 +38,24 @@ namespace csgame.Models
             Console.WriteLine("%%%%%%%%%%%%%%%%%%%% PLAYER STATS %%%%%%%%%%%%%%");
             Console.WriteLine($"HP: {Health}\nStrength: {Strength}\nSpeed: {Speed}");
         }
-        static void ConsoleRed(string text)
-        {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(text);
-            Console.ResetColor();
-        }
-
+    
         public virtual void Attack(Enemy target)
         {
             int dmg = Strength;
             target.Health -= dmg;
             // Console.ForegroundColor = ConsoleColor.Red;
-            ConsoleRed($"{Type} {Name} attacked {target.Type} {target.Name} for {dmg} damage!");
+            Color.Red($"{Type} {Name} attacked {target.Type} {target.Name} for {dmg} damage!");
             target.showHp();
-            if (target.Health <= 0)
-            {
+            // if (target.Health <= 0)
+            // {
 
-            }
+            // }
 
+        }
+
+        public virtual void SpecialMove(Enemy target)
+        {
+            Color.Red("Placeholder");
         }
     }
 }
