@@ -94,10 +94,10 @@ namespace csgame
         public static void Main(string[] args)
         {
             // CreateWebHostBuilder(args).Build().Run();
-            Color.Green("%%%%%%%%%%%% Time Thieves 2: There is no Time Theves 1 %%%%%%%%%%%%%%%");
-            Pause.Enter();
-            // TestGame();
-            StartGame();
+            // Color.Green("%%%%%%%%%%%% Time Thieves 2: There is no Time Theves 1 %%%%%%%%%%%%%%%");
+            // Pause.Enter();
+            TestGame();
+            // StartGame();
             // Player player = PlayerSetup ();
             // PlayerSetup();
         }
