@@ -96,7 +96,8 @@ namespace csgame
             // CreateWebHostBuilder(args).Build().Run();
             Color.Green("%%%%%%%%%%%% Time Thieves 2: There is no Time Theves 1 %%%%%%%%%%%%%%%");
             Pause.Enter();
-            TestGame();
+            // TestGame();
+            StartGame();
             // Player player = PlayerSetup ();
             // PlayerSetup();
         }
